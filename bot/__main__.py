@@ -35,9 +35,9 @@ if not os.path.isdir("./downloads"):
 
 Bot.start()
 User.start()
-print("\nVideo Player Bot Started, Join @tgbotsproject")
+print("\nVideo Player Bot Started, Join @CozmoUpdates")
 
 idle()
 Bot.stop()
 User.stop()
-print("\nVideo Player Bot Stopped, Join @ZauteKm!")
+print("\nVideo Player Bot Stopped, Join @CozmoSupport_Official!")
