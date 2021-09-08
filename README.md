@@ -1,6 +1,6 @@
 # Telegram vcVideoPlayer
 
-- An Telegram Bot By [@ZauteKm](https://t.me/ZauteKm) To Stream Videos in Telegram Voice Chat.
+- An Telegram Bot By [@TeamCozmo](https://t.me/CozmoUpdates) To Stream Videos in Telegram Voice Chat.
 
 ---
 
@@ -33,11 +33,11 @@
 <br/>
 
 <b>Pre Requisites (Config Vars)</b>
-- `API_ID` : Get from [my.telegram.org](https://my.telegram.org/app) or [@UseTGzKBot](https://telegram.dog/UseTGzKBot)
-- `API_HASH` : Get from [my.telegram.org](https://my.telegram.org/app) or [@UseTGzKBot](https://telegram.dog/UseTGzKBot)
+- `API_ID` : Get from [my.telegram.org](https://my.telegram.org/app) or [@MyTeleORG](https://telegram.dog/MyTeleORG_herobot)
+- `API_HASH` : Get from [my.telegram.org](https://my.telegram.org/app) or [@MyTeleORG](https://telegram.dog/MyTeleORG_herobot)
 - `BOT_TOKEN` : Get From [@Botfather](https://telegram.dog/BotFather)
 - `BOT_USERNAME` : Your Telegram Bot Username, get it from @Botfather XD
-- `SESSION_STRING` : Generate From here [![GenerateStringName](https://img.shields.io/badge/repl.it-generateStringName-yellowgreen)](https://replit.com/@ZauteKm/GenerateStringSession)
+- `SESSION_STRING` : Generate From here [GenerateStringName](https://telegram.dog/StringSessionGenerator_herobot)
 - `CHAT_ID` : ID of Channel/Group where the bot will works or stream videos.
 - `AUTH_USERS` : ID of Users who can use Admins commands (for multiple users seperated by space).
 - `REPLY_MESSAGE` : A reply to those who message the USER account in PM. Leave it blank if you do not need this feature. 
@@ -51,7 +51,7 @@
 <details><summary><b>Deploy to Heroku</b></summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/ZauteKm/vcVideoPlayer">
+<a href="https://heroku.com/deploy?template=https://github.com/rasindugimhan/vcVideoPlayer">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
@@ -62,7 +62,7 @@
 <br/>
 
 <p align="left">
-<a href="https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FZauteKm%2FvcVideoPlayer&envs=API_ID%2CAPI_HASH%2CBOT_TOKEN%2CSESSION_STRING%2CCHAT_ID%2CAUTH_USERS%2CBOT_USERNAME%2CREPLY_MESSAGE&optionalEnvs=REPLY_MESSAGE&API_IDDesc=User+Account+Telegram+API_ID+get+it+from+my.telegram.org%2Fapps&API_HASHDesc=User+Account+Telegram+API_HASH+get+it+from+my.telegram.org%2Fapps&BOT_TOKENDesc=Your+Telegram+Bot+Token%2C+get+it+from+%40Botfather+XD&SESSION_STRINGDesc=Pyrogram+Session+String+of+User+Account%2C+get+it+from+%4https://replit.com/@ZauteKm/GenerateStringSession&CHAT_IDDesc=ID+of+your+Channel+or+Group+where+the+bot+will+works+or+stream+videos&AUTH_USERSDesc=ID+of+Auth+Users+who+can+use+Admin+commands+%28for+multiple+users+seperated+by+space%29&BOT_USERNAMEDesc=Your+Telegram+Bot+Username+without+%40%2C+get+it+from+%40Botfather+XD&REPLY_MESSAGEDesc=A+reply+message+to+those+who+message+the+USER+account+in+PM.+Make+it+blank+if+you+do+not+need+this+feature.&REPLY_MESSAGEDefault=Hello+Sir%2C+I%27m+a+bot+to+stream+videos+on+telegram+voice+chat%2C+not+having+time+to+chat+with+you+%F0%9F%98%82%21&referralCode=,ZAUTEKM"
+<a href="https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Frasindugimhan%2FvcVideoPlayer&envs=API_ID%2CAPI_HASH%2CBOT_TOKEN%2CSESSION_STRING%2CCHAT_ID%2CAUTH_USERS%2CBOT_USERNAME%2CREPLY_MESSAGE&optionalEnvs=REPLY_MESSAGE&API_IDDesc=User+Account+Telegram+API_ID+get+it+from+my.telegram.org%2Fapps&API_HASHDesc=User+Account+Telegram+API_HASH+get+it+from+my.telegram.org%2Fapps&BOT_TOKENDesc=Your+Telegram+Bot+Token%2C+get+it+from+%40Botfather+XD&SESSION_STRINGDesc=Pyrogram+Session+String+of+User+Account%2C+get+it+from+%4https://replit.com/@ZauteKm/GenerateStringSession&CHAT_IDDesc=ID+of+your+Channel+or+Group+where+the+bot+will+works+or+stream+videos&AUTH_USERSDesc=ID+of+Auth+Users+who+can+use+Admin+commands+%28for+multiple+users+seperated+by+space%29&BOT_USERNAMEDesc=Your+Telegram+Bot+Username+without+%40%2C+get+it+from+%40Botfather+XD&REPLY_MESSAGEDesc=A+reply+message+to+those+who+message+the+USER+account+in+PM.+Make+it+blank+if+you+do+not+need+this+feature.&REPLY_MESSAGEDefault=Hello+Sir%2C+I%27m+a+bot+to+stream+videos+on+telegram+voice+chat%2C+not+having+time+to+chat+with+you+%F0%9F%98%82%21&referralCode=,ZAUTEKM"
 ">
      <img height="30px" src="https://railway.app/button.svg">
   </a>
@@ -78,7 +78,7 @@
 <br/>
 
 ```sh
-$ git clone https://github.com/ZauteKm/vcVideoPlayer.git
+$ git clone https://github.com/rasindugimhan/vcVideoPlayer.git
 $ cd vcVideoPlayer
 $ sudo apt-get install python3-pip ffmpeg
 $ pip3 install -U pip
