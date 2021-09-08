@@ -1,20 +1,3 @@
-"""
-vcVideoPlayer, Telegram Video Chat Bot
-Copyright (c) 2021 Zaute Km
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>
-"""
 
 import os
 import re
@@ -177,11 +160,11 @@ allcmd = ["start", "help", f"start@{USERNAME}", f"help@{USERNAME}"] + admincmds
 async def not_chat(_, m: Message):
     buttons = [
             [
-                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsproject"),
+                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoot?start=feedback"),
+                InlineKeyboardButton("Channel 📢", url="https://t.me/CozmoSupport_Official"),
             ],
             [
-                InlineKeyboardButton("🤖 Deploy to Heroku 🤖", url="https://heroku.com/deploy?template=https://github.com/ZauteKm/vcVideoPlayer"),
+                InlineKeyboardButton("🤖 Deploy to Heroku 🤖", url="https://heroku.com/deploy?template=https://github.com/rasindugimhan/vcVideoPlayer"),
             ]
          ]
     await m.reply_text(text="**Sorry, You Can't Use This Bot In This Group 🤷‍♂️! But You Can Make Your Own Bot Like This From The [Source Code](https://github.com/ZauteKm/vcVideoPlayer) Below 😉!**", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
