@@ -1,20 +1,3 @@
-"""
-vcVideoPlayer, Telegram Video Chat Bot
-Copyright (c) 2021  Zaute Km
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>
-"""
 
 import asyncio
 from pyrogram.handlers import InlineQueryHandler
@@ -28,11 +11,11 @@ REPLY_MESSAGE = Config.REPLY_MESSAGE
 
 buttons = [
             [
-                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsproject"),
+                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoot?start=feedback"),
+                InlineKeyboardButton("Channel 📢", url="https://t.me/CozmoSupport_Official"),
             ],
             [
-                InlineKeyboardButton("🤖 Deploy to Heroku 🤖", url="https://heroku.com/deploy?template=https://github.com/ZauteKm/vcVideoPlayer"),
+                InlineKeyboardButton("🤖 Deploy to Heroku 🤖", url="https://heroku.com/deploy?template=https://github.com/rasindugimhan/vcVideoPlayer"),
             ]
          ]
 
@@ -43,7 +26,7 @@ async def search(client, query):
         answers.append(
             InlineQueryResultArticle(
                 title="Deploy Own Video Player Bot",
-                input_message_content=InputTextMessageContent(f"{REPLY_MESSAGE}\n\n<b>© Powered By : \n@AsmSafone | @SafoTheBot 👑</b>", disable_web_page_preview=True),
+                input_message_content=InputTextMessageContent(f"{REPLY_MESSAGE}\n\n<b>© Powered By : \n@CozmoUdtaes | @Mr_Rasiyaa 👑</b>", disable_web_page_preview=True),
                 reply_markup=InlineKeyboardMarkup(buttons)
                 )
             )
