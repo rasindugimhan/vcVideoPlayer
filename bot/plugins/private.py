@@ -1,20 +1,3 @@
-"""
-vcVideoPlayer, Telegram Video Chat Bot
-Copyright (c) 2021  Zaute Km
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>
-"""
 
 import asyncio
 from config import Config
@@ -50,12 +33,12 @@ HELP_TEXT = """
 async def cb_handler(client: Client, query: CallbackQuery):
     if query.data=="help":
         buttons = [
-            [
-                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsproject"),
+           [
+                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoot?start=feedback"),
+                InlineKeyboardButton("Channel 📢", url="https://t.me/CozmoSupport_Official"),
             ],
             [
-                InlineKeyboardButton("🔰 Source Code 🔰", url="https://github.com/ZauteKm/vcVideoPlayer"),
+                InlineKeyboardButton("🔰 Source Code 🔰", url="https://github.com/rasindugimhan/vcVideoPlayer"),
             ],
             [
                 InlineKeyboardButton("🏘️ Home", callback_data="home"),
@@ -74,11 +57,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="home":
         buttons = [
             [
-                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsproject"),
+                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoot?start=feedback"),
+                InlineKeyboardButton("Channel 📢", url="https://t.me/CozmoSupport_Official"),
             ],
             [
-                InlineKeyboardButton("🔰 Source Code 🔰", url="https://github.com/ZauteKm/vcVideoPlayer"),
+                InlineKeyboardButton("🔰 Source Code 🔰", url="https://github.com/rasindugimhan/vcVideoPlayer"),
             ],
             [
                 InlineKeyboardButton("⛑️ Help", callback_data="help"),
@@ -106,11 +89,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
 async def start(client, message):
     buttons = [
             [
-                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsproject"),
+                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoot?start=feedback"),
+                InlineKeyboardButton("Channel 📢", url="https://t.me/CozmoSupport_Official"),
             ],
             [
-                InlineKeyboardButton("🔰 Source Code 🔰", url="https://github.com/ZauteKm/vcVideoPlayer"),
+                InlineKeyboardButton("🔰 Source Code 🔰", url="https://github.com/rasindugimhan/vcVideoPlayer"),
             ],
             [
                 InlineKeyboardButton("⛑️ Help", callback_data="help"),
@@ -124,11 +107,11 @@ async def start(client, message):
 async def help(client, message):
     buttons = [
             [
-                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
-                InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsproject"),
+                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoot?start=feedback"),
+                InlineKeyboardButton("Channel 📢", url="https://t.me/CozmoSupport_Official"),
             ],
             [
-                InlineKeyboardButton("🔰 Source Code 🔰", url="https://github.com/ZauteKm/vcVideoPlayer"),
+                InlineKeyboardButton("🔰 Source Code 🔰", url="https://github.com/rasindugimhan/vcVideoPlayer"),
             ],
             [
                 InlineKeyboardButton("🏘️ Home", callback_data="home"),
