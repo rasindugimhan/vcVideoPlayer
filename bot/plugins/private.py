@@ -34,7 +34,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     if query.data=="help":
         buttons = [
            [
-                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoot?start=feedback"),
+                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoBot?start=feedback"),
                 InlineKeyboardButton("Channel 📢", url="https://t.me/CozmoSupport_Official"),
             ],
             [
@@ -57,7 +57,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="home":
         buttons = [
             [
-                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoot?start=feedback"),
+                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoBot?start=feedback"),
                 InlineKeyboardButton("Channel 📢", url="https://t.me/CozmoSupport_Official"),
             ],
             [
@@ -85,11 +85,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
 
 
-@Client.on_message(filters.command(["start", f"start@{USERNAME}"]) & (filters.chat(CHAT_ID) | filters.private))
+@Client.on_message(filters.command(["vstart", f"start@{USERNAME}"]) & (filters.chat(CHAT_ID) | filters.private))
 async def start(client, message):
     buttons = [
             [
-                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoot?start=feedback"),
+                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoBot?start=feedback"),
                 InlineKeyboardButton("Channel 📢", url="https://t.me/CozmoSupport_Official"),
             ],
             [
@@ -103,11 +103,11 @@ async def start(client, message):
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_text(text=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
 
-@Client.on_message(filters.command(["help", f"help@{USERNAME}"]) & (filters.chat(CHAT_ID) | filters.private))
+@Client.on_message(filters.command(["vhelp", f"help@{USERNAME}"]) & (filters.chat(CHAT_ID) | filters.private))
 async def help(client, message):
     buttons = [
             [
-                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoot?start=feedback"),
+                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoBot?start=feedback"),
                 InlineKeyboardButton("Channel 📢", url="https://t.me/CozmoSupport_Official"),
             ],
             [
