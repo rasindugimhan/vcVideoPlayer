@@ -11,7 +11,7 @@ REPLY_MESSAGE = Config.REPLY_MESSAGE
 
 buttons = [
             [
-                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoot?start=feedback"),
+                InlineKeyboardButton("🗣️ Feedback", url="https://t.me/TheCozmoBot?start=feedback"),
                 InlineKeyboardButton("Channel 📢", url="https://t.me/CozmoSupport_Official"),
             ],
             [
