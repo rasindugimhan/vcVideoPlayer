@@ -14,8 +14,7 @@ from pyrogram.types import Message
 from pytgcalls import GroupCallFactory
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-ADMINS = Config.ADMINS
-CHAT_ID = Config.CHAT_ID
+
 USERNAME = Config.BOT_USERNAME
 
 STREAM = {6}
@@ -28,8 +27,9 @@ ydl_opts = {
 ydl = YoutubeDL(ydl_opts)
 group_call_factory = GroupCallFactory(User, GroupCallFactory.MTPROTO_CLIENT_TYPE.PYROGRAM)
 
-@Client.on_message(filters.command(["stream", f"stream@{USERNAME}"]) & filters.user(ADMINS) & (filters.chat(CHAT_ID) | filters.private))
+@Client.on_message(filters.command(["stream", f"stream@{USERNAME}"])
 async def stream(client, m: Message):
+    CHAT_ID = m.chat.id
     if 1 in STREAM:
         await m.reply_text("🤖 **Please Stop The Existing Stream!**")
         return
@@ -119,8 +119,9 @@ async def stream(client, m: Message):
         return
 
 
-@Client.on_message(filters.command(["endstream", f"endstream@{USERNAME}"]) & filters.user(ADMINS) & (filters.chat(CHAT_ID) | filters.private))
+@Client.on_message(filters.command(["endstream", f"endstream@{USERNAME}"])
 async def endstream(client, m: Message):
+    CHAT_ID = m.chat.id
     if 0 in STREAM:
         await m.reply_text("🤖 **Please Start An Stream First!**")
         return
@@ -144,7 +145,7 @@ async def endstream(client, m: Message):
 
 admincmds=["stream", "radio", "stopradio", "endstream", f"stream@{USERNAME}", f"radio@{USERNAME}", f"stopradio@{USERNAME}", f"endstream@{USERNAME}"]
 
-@Client.on_message(filters.command(admincmds) & ~filters.user(ADMINS) & (filters.chat(CHAT_ID) | filters.private))
+@Client.on_message(filters.command(admincmds))
 async def notforu(_, m: Message):
     k = await m.reply_sticker("CAADBQADsQIAAtILIVYld1n74e3JuQI")
     await sleep(5)
@@ -156,7 +157,7 @@ async def notforu(_, m: Message):
 
 allcmd = ["vstart", "vhelp", f"start@{USERNAME}", f"help@{USERNAME}"] + admincmds
 
-@Client.on_message(filters.command(allcmd) & filters.group & ~filters.chat(CHAT_ID))
+@Client.on_message(filters.command(allcmd) & filters.group)
 async def not_chat(_, m: Message):
     buttons = [
             [
