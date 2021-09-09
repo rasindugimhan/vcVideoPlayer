@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import MessageNotModified
 
-CHAT_ID = Config.CHAT_ID
+
 USERNAME = Config.BOT_USERNAME
 HOME_TEXT = "**Hi [{}](tg://user?id={})**, \n\nI'm **Telegram VC Video Player Bot**. \nI Can Stream Videos On Telegram Voice Chat From YouTube & Telegram Video Files!"
 HELP_TEXT = """
@@ -17,8 +17,8 @@ HELP_TEXT = """
 
 🏷️ **Common Commands:**
 
-\u2022 `/start` - Start the bot.
-\u2022 `/help` - Show the help message.
+\u2022 `/vstart` - Start the bot.
+\u2022 `/vhelp` - Show the help message.
 
 🏷️ **Admin Only Commands:**
 
@@ -85,7 +85,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
 
 
-@Client.on_message(filters.command(["vstart", f"start@{USERNAME}"]) & (filters.chat(CHAT_ID) | filters.private))
+@Client.on_message(filters.command(["vstart", f"vstart@{USERNAME}"])
 async def start(client, message):
     buttons = [
             [
@@ -103,7 +103,7 @@ async def start(client, message):
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_text(text=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
 
-@Client.on_message(filters.command(["vhelp", f"help@{USERNAME}"]) & (filters.chat(CHAT_ID) | filters.private))
+@Client.on_message(filters.command(["vhelp", f"vhelp@{USERNAME}"])
 async def help(client, message):
     buttons = [
             [
