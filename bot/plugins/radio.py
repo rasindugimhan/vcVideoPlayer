@@ -12,15 +12,15 @@ from bot.plugins.player import STREAM
 from bot.plugins.player import ydl, group_call_factory
 
 ADMINS = Config.ADMINS
-CHAT_ID = Config.CHAT_ID
 USERNAME = Config.BOT_USERNAME
 
 RADIO_CALL = {}
 FFMPEG_PROCESSES = {}
 
 
-@Client.on_message(filters.command(["radio", f"radio@{USERNAME}"]) & filters.user(ADMINS) & (filters.chat(CHAT_ID) | filters.private))
+@Client.on_message(filters.command(["radio", f"radio@{USERNAME}"])
 async def radio(client, m: Message):
+    CHAT_ID = m.chat.id
     if 1 in STREAM:
         await m.reply_text("🤖 **Please Stop The Existing Stream!**")
         return
@@ -90,7 +90,7 @@ async def radio(client, m: Message):
             await msg.edit(f"❌ **An Error Occoured!** \n\nError: `{e}`")
     
         
-@Client.on_message(filters.command(["stopradio", f"stopradio@{USERNAME}"]) & filters.user(ADMINS) & (filters.chat(CHAT_ID) | filters.private))
+@Client.on_message(filters.command(["stopradio", f"stopradio@{USERNAME}"]) 
 async def stopradio(client, m: Message):
     if 0 in STREAM:
         await m.reply_text("🤖 **Please Start An Stream First!**")
